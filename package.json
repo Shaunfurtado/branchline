@@ -1,0 +1,30 @@
+{
+  "name": "branchline",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Agent-native operational recovery control plane powered by WebMCP.",
+  "scripts": {
+    "dev": "npm run build && python3 scripts/serve.py --root dist --port 5173",
+    "build": "node scripts/build.mjs",
+    "preview": "python3 scripts/serve.py --root dist --port 4173",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "node scripts/lint.mjs",
+    "format": "node scripts/format.mjs",
+    "build:test": "node scripts/build-test.mjs",
+    "test": "npm run build:test && node --test build-test/tests/*.test.js",
+    "test:watch": "npm run build:test && node --test --watch build-test/tests/*.test.js",
+    "test:e2e": "npm run build && python3 scripts/run_e2e.py",
+    "capture": "npm run build && python3 scripts/capture_screenshots.py",
+    "check:tools": "npm run build:test --silent && node scripts/check-tool-budgets.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run check:tools && npm run build && npm run verify:build",
+    "verify:build": "node scripts/verify-build.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "file:vendor/typescript-5.8.3.tgz"
+  }
+}

@@ -1,0 +1,7 @@
+I just protected the Apex Health order in the interface. Re-read the shared constraints and re-simulate the best branch.
+
+The staged plan is approved. Apply it, verify the result, and explain why you split the battery order.
+
+Why did you choose Arda and Helix rather than Voltra for ORION-X?
+
+Restore the checkpoint because the supplier agreement was not signed.

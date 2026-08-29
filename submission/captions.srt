@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:10,000
+Operational disruptions are rarely one broken node. They are chains across suppliers, inventory, factories, products, and customer commitments.
+
+2
+00:00:10,000 --> 00:00:24,000
+BRANCHLINE turns that chain into one live operational twin shared by a person and their browser agent. This synthetic outage exposes sixteen orders, two plants, and twenty-eight point four three million dollars of revenue—computed from the graph.
+
+3
+00:00:24,000 --> 00:00:47,000
+Instead of reading pixels and guessing which controls to click, the agent invokes the application’s actual semantics. Each call reads the same state the person sees, and each investigation is rendered visibly in the operational world.
+
+4
+00:00:47,000 --> 00:01:11,000
+The agent forks three materially different recovery futures and runs a deterministic thirty-day simulation for each. Service First maximizes delivery. Cost Guard accepts lower-priority delays. Balanced Recovery combines compatible suppliers, inventory movement, and resequencing. The recommendation is structured evidence, not a text-only answer.
+
+5
+00:01:11,000 --> 00:01:36,000
+Now the person changes intent directly. Protecting the Apex Health order increments the shared context, makes every old future stale, and revokes staging and execution capabilities. The agent’s next call encounters that exact change and replans—using scarce compatible supply for Apex and moving a lower-priority commitment instead.
+
+6
+00:01:36,000 --> 00:01:58,000
+The agent can stage a plan, but it cannot approve one. Consequential execution is not merely disabled; the apply tool does not exist until a person approves the exact, current simulated diff. That approval is bound to the context and simulation hash.
+
+7
+00:01:58,000 --> 00:02:22,000
+After approval, the future becomes reality. BRANCHLINE creates a checkpoint, applies the linked actions transactionally, then verifies the result against its promise. In this run, ninety-three point four percent of exposed revenue is protected, cost stays below three hundred thousand dollars, Apex arrives at T plus one, and hard violations remain zero.
+
+8
+00:02:22,000 --> 00:02:35,000
+Every tradeoff remains explainable. Causal Proof shows why Voltra was rejected for ORION, where compatible capacity came from, what inventory moved, and which lower-priority order changed in the counterfactual.
+
+9
+00:02:35,000 --> 00:02:41,000
+BRANCHLINE: fork reality, simulate the consequences, commit the future.

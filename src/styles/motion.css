@@ -1,0 +1,67 @@
+@keyframes edge-travel { to { stroke-dashoffset: -30; } }
+@keyframes shock-ring {
+  0% { r: 20px; opacity: .9; stroke-width: 3; }
+  100% { r: 145px; opacity: 0; stroke-width: .5; }
+}
+@keyframes scan-sweep {
+  0% { transform: translateX(-100%); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+@keyframes substitute-breathe { 50% { opacity: .62; } }
+@keyframes branch-flow { to { stroke-dashoffset: -20; } }
+@keyframes commit-orbit { to { stroke-dashoffset: -50; } }
+@keyframes commit-pulse { 50% { r: 58px; opacity: .42; } }
+@keyframes orbit { to { transform: rotate(360deg) translateX(11px); } }
+@keyframes pin-drop {
+  0% { opacity: 0; transform: translateY(-34px) scale(.5); }
+  65% { opacity: 1; transform: translateY(3px) scale(1.14); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes fracture-in {
+  0% { opacity: 0; transform: scaleY(.2); }
+  100% { opacity: 1; transform: scaleY(1); }
+}
+@keyframes commit-in {
+  0% { opacity: 0; transform: scale(.82); filter: saturate(.2); }
+  100% { opacity: 1; transform: scale(1); filter: saturate(1); }
+}
+@keyframes rewind {
+  0% { opacity: .35; transform: scale(1.025); filter: hue-rotate(0deg); }
+  100% { opacity: 1; transform: scale(1); filter: hue-rotate(-16deg); }
+}
+@keyframes toast-in {
+  from { opacity: 0; transform: translateX(18px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes drawer-in {
+  from { transform: translateX(100%); opacity: .4; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes modal-in {
+  from { opacity: 0; transform: translate(-50%, -47%) scale(.985); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.human-pin { animation: pin-drop .72s var(--ease-out) both; }
+.fracture, .stale-explanation { animation: fracture-in .48s var(--ease-out) both; transform-origin: center; }
+.atlas-panel.is-committing .atlas-stage { animation: commit-in 1.15s var(--ease-cinematic) both; }
+.atlas-panel.is-rewinding .atlas-stage { animation: rewind 1.15s var(--ease-cinematic) both; }
+.toast { animation: toast-in .35s var(--ease-out) both; }
+.capability-dock, .side-drawer, .entity-inspector { animation: drawer-in .38s var(--ease-out) both; }
+.approval-surface, .recovery-panel, .about-modal, .debug-lab { animation: modal-in .38s var(--ease-out) both; }
+.visual-event-caption { animation: toast-in .35s var(--ease-out) both; }
+
+::view-transition-old(root) { animation: .45s var(--ease-cinematic) both fade-out; }
+::view-transition-new(root) { animation: .85s var(--ease-cinematic) both commit-in; }
+@keyframes fade-out { to { opacity: .15; transform: scale(.992); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+  .flow-edge.is-affected, .flow-edge.is-proof, .future-flow, .human-intent-wave { stroke-dasharray: none; }
+}
