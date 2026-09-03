@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" data-time="golden">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#07100d" />
+  <meta name="description" content="NeuroDrive — browser-native multi-agent self-driving traffic and neural policy simulation." />
+  <title>NeuroDrive — Autonomous Traffic Physics Lab</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <main id="app" aria-label="NeuroDrive autonomous traffic simulation">
+    <!-- First child so assistive tech reads the overlay before the scene it
+         covers; z-index handles the visual stacking, DOM order the reading
+         order. Landing.js fills this in. -->
+    <section id="landing" class="landing" role="dialog" aria-modal="true" aria-label="NeuroDrive introduction"></section>
+    <canvas id="world" aria-label="3D autonomous driving simulation" tabindex="-1"></canvas>
+    <div id="world-labels" aria-hidden="true"></div>
+    <div id="hud-root"></div>
+    <div id="boot" class="boot" role="status" aria-live="polite">
+      <div class="boot__halo"></div>
+      <div class="boot__mark"><span>ND</span></div>
+      <div class="boot__copy">
+        <strong>NEURODRIVE</strong>
+        <small>Browser-native autonomy stack</small>
+      </div>
+      <div class="boot__track"><i></i></div>
+      <p id="boot-status">Initializing WebGL2 renderer</p>
+    </div>
+    <noscript>This simulation requires JavaScript.</noscript>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
