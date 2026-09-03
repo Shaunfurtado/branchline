@@ -1,0 +1,6 @@
+
+> branchline@1.0.0 check:tools
+> npm run build:test --silent && node scripts/check-tool-budgets.mjs
+
+Tool budget checks passed: 14 tools, 4870 total schema bytes, longest name 20 chars.
+checktools_exit=0

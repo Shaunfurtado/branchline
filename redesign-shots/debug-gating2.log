@@ -1,0 +1,12 @@
+snapshot data keys: ['phase', 'active_disruption', 'headline', 'constraints', 'branches', 'staged_plan', 'human_approval', 'state_version', 'context_version']
+branch ids: ['branch_01_service_first', 'branch_02_cost_guard']
+simulate branch_01_service_first -> Probe A simulated: 8 delayed order(s), $303,723 incremental cost.
+simulate branch_02_cost_guard -> Probe B simulated: 10 delayed order(s), $200,568 incremental cost.
+  registered[+0ms]: ['create_branch', 'find_substitutes', 'get_ops_snapshot', 'inspect_entity', 'list_constraints', 'read_external_alerts', 'simulate_branch', 'trace_impact']
+  registered[+800ms]: ['create_branch', 'find_substitutes', 'get_ops_snapshot', 'inspect_entity', 'list_constraints', 'read_external_alerts', 'simulate_branch', 'trace_impact']
+  registered[+1600ms]: ['create_branch', 'find_substitutes', 'get_ops_snapshot', 'inspect_entity', 'list_constraints', 'read_external_alerts', 'simulate_branch', 'trace_impact']
+  registered[+2600ms]: ['create_branch', 'find_substitutes', 'get_ops_snapshot', 'inspect_entity', 'list_constraints', 'read_external_alerts', 'simulate_branch', 'trace_impact']
+
+branch records after simulate:
+   FULL: {"id": "branch_01_service_first", "name": "Probe A", "strategy": "service_first", "status": "invalid", "context_version": 2, "extra_cost_dollars": 303723, "revenue_protected_dollars": 15528000, "on_time_orders": 16, "delayed_orders": 8, "hard_violations": 2}
+   FULL: {"id": "branch_02_cost_guard", "name": "Probe B", "strategy": "cost_guard", "status": "invalid", "context_version": 2, "extra_cost_dollars": 200568, "revenue_protected_dollars": 11796000, "on_time_orders": 14, "delayed_orders": 10, "hard_violations": 1}

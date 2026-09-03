@@ -1,0 +1,16 @@
+
+> branchline@1.0.0 build
+> node scripts/build.mjs
+
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+[Error: EBUSY: resource busy or locked, rmdir 'C:\Users\shaun\Downloads\BRANCHLINE-complete\branchline\dist'] {
+  errno: -4082,
+  code: 'EBUSY',
+  syscall: 'rmdir',
+  path: 'C:\\Users\\shaun\\Downloads\\BRANCHLINE-complete\\branchline\\dist'
+}
+
+Node.js v22.22.2

@@ -1,32 +1,72 @@
 :root {
-  color-scheme: dark;
-  --bg-deep: #05070b;
-  --bg-raised: #0a0f16;
-  --panel: #0e1621;
-  --panel-highlight: #142131;
-  --panel-soft: #101b28;
-  --text: #edf5ff;
-  --muted: #8ea0b7;
-  --muted-2: #60738a;
-  --hairline: rgba(142, 160, 183, 0.18);
-  --hairline-strong: rgba(142, 160, 183, 0.34);
-  --healthy: #43d9b3;
-  --warning: #ffb454;
-  --critical: #ff5577;
-  --agent: #9d8cff;
-  --human: #ffc857;
-  --future: #55a7ff;
-  --cyan: #68d9ff;
-  --shadow: rgba(0, 0, 0, 0.42);
-  --topbar-h: 68px;
-  --bottom-h: 154px;
-  --left-w: 284px;
-  --right-w: 364px;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 14px;
-  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  color-scheme: light;
+
+  /* =========================================================================
+     LIGHT EDITORIAL SYSTEM — inspired by clixfeed.in
+     Warm paper ground, near-black ink, hairline rules, ONE restrained brand
+     accent (terracotta). No blue, no neon, no glow.
+     ========================================================================= */
+
+  /* ----- Paper & surfaces (warm-neutral, tinted with a hint of warmth) ----- */
+  --paper:           oklch(98.6% 0.006 85);   /* page */
+  --bg-deep:         oklch(98.2% 0.007 82);   /* page fallback */
+  --bg-raised:       oklch(99.3% 0.004 82);   /* rails */
+  --panel:           oklch(100% 0 0);         /* cards / pure paper */
+  --panel-highlight: oklch(97% 0.006 80);
+  --panel-soft:      oklch(98% 0.005 82);
+  --surface-2:       oklch(97% 0.006 80);
+  --surface-3:       oklch(95% 0.008 78);
+
+  /* ----- Ink & text ----- */
+  --text:        oklch(30% 0.02 60);
+  --text-strong: oklch(21% 0.022 58);
+  --ink:         oklch(24% 0.022 58);   /* primary action / headings anchor */
+  --muted:       oklch(48% 0.016 60);
+  --muted-2:     oklch(60% 0.013 60);
+
+  /* ----- Hairlines (warm, low chroma — never pure gray) ----- */
+  --hairline:        rgba(40, 34, 26, 0.13);
+  --hairline-strong: rgba(40, 34, 26, 0.24);
+
+  /* ----- Brand accent: warm terracotta (distinct from status colors) ----- */
+  --accent:     oklch(56% 0.15 42);
+  --accent-ink: oklch(99% 0.01 85);              /* text on accent */
+  --accent-soft: oklch(96% 0.035 60);            /* tinted surface */
+  --ring: 0 0 0 3px rgba(178, 92, 60, 0.32);
+
+  /* ----- Semantic status (tuned for on-paper contrast) ----- */
+  --healthy:  oklch(51% 0.13 152);
+  --warning:  oklch(64% 0.15 72);
+  --critical: oklch(54% 0.20 27);
+  --agent:    oklch(50% 0.13 300);   /* plum */
+  --human:    oklch(63% 0.12 68);    /* gold */
+  --future:   oklch(56% 0.15 42);    /* terracotta (default/balanced lane) */
+  --cyan:     oklch(58% 0.10 195);   /* calm teal (resilience lane only) */
+
+  /* ----- Elevation (soft, warm-cast — no glow) ----- */
+  --shadow:     rgba(40, 34, 26, 0.10);
+  --shadow-sm:  0 1px 2px rgba(40, 34, 26, .06), 0 1px 3px rgba(40, 34, 26, .08);
+  --shadow-md:  0 8px 24px rgba(40, 34, 26, .10);
+  --shadow-lg:  0 26px 64px rgba(40, 34, 26, .18);
+
+  /* ----- Layout metrics (breathing room) ----- */
+  --topbar-h: 72px;
+  --bottom-h: 172px;
+  --left-w: 304px;
+  --right-w: 384px;
+
+  /* ----- Radius scale ----- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  /* ----- Typography (editorial: display serif + clean UI sans) ----- */
+  --font-ui: "Plus Jakarta Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  /* ----- Motion ----- */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-cinematic: cubic-bezier(0.65, 0, 0.35, 1);
 }

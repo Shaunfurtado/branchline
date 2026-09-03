@@ -1,0 +1,28 @@
+
+--- get_ops_snapshot (disrupted) summary ---
+{"ok": true, "summary": "16 orders are exposed by the active disruption.", "affected_ids": ["sup_nori", "cmp_battery_cell", "hub_sin", "prod_lynx", "prod_orion", "prod_atlas", "prod_nova", "fac_blr", "fac_maa", "hub_jnh", "order_1071", "order_1075", "order_1077", "order_1081", "order_1085", "order_1088", "order_1091", "order_1094", "order_1073", "order_1078"]}
+
+--- discovered id fields ---
+{"id": "disrupt_nori_12d", "source_id": "sup_nori"}
+
+--- trace_impact(source_id=disrupt_nori_12d) ---
+{"ok": true, "summary": "Causal trace found 16 exposed orders and 5 critical paths.", "affected_count": 13, "sample": ["sup_nori", "cmp_battery_cell", "prod_lynx", "order_1071", "cus_quanta", "order_1075"]}
+
+--- list_constraints() ---
+{"ok": true, "summary": "1 protected tier rule(s), 0 human lock(s), and one hard compatibility prohibition are active."}
+
+--- create_branch(...) [agent writes via MCP] ---
+{"ok": false, "summary": "Unexpected input properties: note.", "affected_ids": null, "next_tools": null}
+
+registered after agent create_branch: ['create_branch', 'find_substitutes', 'get_ops_snapshot', 'inspect_entity', 'list_constraints', 'read_external_alerts', 'trace_impact']
+
+--- read_external_alerts() [untrusted] ---
+{"ok": true, "summary": "3 unverified alert(s) returned as plain text."}
+
+--- inspect_entity(entity_id='') [negative test] ---
+{"ok": false, "summary": "entity_id must be a non-empty string no longer than 80 characters."}
+
+--- trace_impact(direction='sideways') [negative test] ---
+{"ok": false, "summary": "direction is invalid."}
+
+console/page errors: 0

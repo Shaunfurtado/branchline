@@ -1,0 +1,173 @@
+{
+  "phases": [
+    {
+      "phase": "1. healthy",
+      "registered": [
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "trace_impact"
+      ]
+    },
+    {
+      "phase": "2. after trigger-shock",
+      "registered": [
+        "create_branch",
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "trace_impact"
+      ]
+    },
+    {
+      "phase": "3. after create-demo-trio",
+      "registered": [
+        "compare_branches",
+        "create_branch",
+        "explain_tradeoff",
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "simulate_branch",
+        "stage_plan",
+        "trace_impact"
+      ]
+    },
+    {
+      "phase": "4. after stage-branch (NOT approved)",
+      "registered": [
+        "compare_branches",
+        "create_branch",
+        "explain_tradeoff",
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "simulate_branch",
+        "trace_impact"
+      ]
+    },
+    {
+      "phase": "5. after approve-plan (human approved)",
+      "registered": [
+        "apply_plan",
+        "compare_branches",
+        "create_branch",
+        "explain_tradeoff",
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "simulate_branch",
+        "trace_impact"
+      ]
+    },
+    {
+      "phase": "6. after manual-apply (executed)",
+      "registered": [
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "rollback_plan",
+        "trace_impact",
+        "verify_plan"
+      ]
+    },
+    {
+      "phase": "7. after manual-verify",
+      "registered": [
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "rollback_plan",
+        "trace_impact",
+        "verify_plan"
+      ]
+    },
+    {
+      "phase": "8. after reset-demo",
+      "registered": [
+        "find_substitutes",
+        "get_ops_snapshot",
+        "inspect_entity",
+        "list_constraints",
+        "read_external_alerts",
+        "trace_impact"
+      ]
+    }
+  ],
+  "invocations": [
+    {
+      "tool": "get_ops_snapshot",
+      "ok": true,
+      "summary": "The operational twin is healthy; no disruption is active."
+    }
+  ],
+  "assertions": [
+    {
+      "assert": "apply_plan ABSENT before human approval",
+      "pass": true
+    },
+    {
+      "assert": "apply_plan PRESENT after human approval",
+      "pass": true
+    },
+    {
+      "assert": "tools unregister on reset",
+      "pass": true,
+      "detail": "8 -> 6"
+    }
+  ],
+  "strategy_audit": [
+    {
+      "strategy": "service_first",
+      "branch_id": "branch_01_service_first",
+      "status": "current",
+      "delayed_orders": 0,
+      "extra_cost_dollars": 288257,
+      "hard_violations": [],
+      "summary": "Audit service_first simulated: 0 delayed order(s), $288,257 incremental cost."
+    },
+    {
+      "strategy": "cost_guard",
+      "branch_id": "branch_02_cost_guard",
+      "status": "current",
+      "delayed_orders": 2,
+      "extra_cost_dollars": 262159,
+      "hard_violations": [],
+      "summary": "Audit cost_guard simulated: 2 delayed order(s), $262,159 incremental cost."
+    },
+    {
+      "strategy": "balanced",
+      "branch_id": "branch_03_balanced",
+      "status": "current",
+      "delayed_orders": 1,
+      "extra_cost_dollars": 256329,
+      "hard_violations": [],
+      "summary": "Audit balanced simulated: 1 delayed order(s), $256,329 incremental cost."
+    },
+    {
+      "strategy": "resilience",
+      "branch_id": "branch_04_resilience",
+      "status": "current",
+      "delayed_orders": 1,
+      "extra_cost_dollars": 263181,
+      "hard_violations": [],
+      "summary": "Audit resilience simulated: 1 delayed order(s), $263,181 incremental cost."
+    }
+  ],
+  "status_chip": "SITE TOOLS | 6 registered | 6",
+  "console_errors": []
+}
