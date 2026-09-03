@@ -6,7 +6,7 @@
 
 Open:
 
-https://branchline-flax.vercel.app/?fresh=1
+https://trybranchline.vercel.app/?fresh=1
 
 `?fresh=1` starts from the healthy featured baseline (ignores any prior local demo state).
 

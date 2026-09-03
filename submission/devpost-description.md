@@ -2,7 +2,7 @@
 
 ## Fork reality. Simulate the consequences. Commit the future.
 
-**Live application:** [https://branchline-flax.vercel.app/?fresh=1](https://branchline-flax.vercel.app/?fresh=1)  
+**Live application:** [https://trybranchline.vercel.app/?fresh=1](https://trybranchline.vercel.app/?fresh=1)  
 **Repository:** [https://github.com/Shaunfurtado/branchline](https://github.com/Shaunfurtado/branchline)  
 **Video:** _Recording/upload pending; complete script and captions included._  
 **Testing instructions:** no credentials — see `submission/testing-instructions.md`
@@ -167,7 +167,7 @@ This is not a dashboard with a chatbot attached. It is one operational world wit
 
 No credentials are required for the live app.
 
-**Live:** https://branchline-flax.vercel.app/?fresh=1
+**Live:** https://trybranchline.vercel.app/?fresh=1
 
 **Local:**
 

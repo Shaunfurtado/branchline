@@ -91,7 +91,7 @@
 
 ## Publication
 
-- [x] Deploy and verify public URL: https://branchline-flax.vercel.app/?fresh=1
+- [x] Deploy and verify public URL: https://trybranchline.vercel.app/?fresh=1
 - [x] Publish and verify public repository: https://github.com/Shaunfurtado/branchline
 - [ ] Record the real compatible-browser-agent demonstration.
 - [ ] Upload and verify public video URL.

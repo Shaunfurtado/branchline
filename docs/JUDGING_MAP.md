@@ -40,7 +40,7 @@ Judge sequence evidence: `e2e/test_featured_flow.py` and `submission/screenshots
 | Static deployment | `dist/`, `vercel.json`, `netlify.toml`, `public/_headers` |
 | Documentation | README and `docs/` set |
 | Submission captures | Nine screenshots in `submission/screenshots/` |
-| Live demo | https://branchline-flax.vercel.app/?fresh=1 |
+| Live demo | https://trybranchline.vercel.app/?fresh=1 |
 | Public repository | https://github.com/Shaunfurtado/branchline |
 | Judge testing notes | `submission/testing-instructions.md` |
 

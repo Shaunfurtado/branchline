@@ -1,6 +1,6 @@
 # Canonical judge demo
 
-Target runtime: 5–7 minutes for an interactive judge walkthrough. Prefer the live app at https://branchline-flax.vercel.app/?fresh=1, or run locally. Use a current Site-tools-compatible browser when demonstrating the agent path, 1920×1080 when possible, and always open with `?fresh=1`.
+Target runtime: 5–7 minutes for an interactive judge walkthrough. Prefer the live app at https://trybranchline.vercel.app/?fresh=1, or run locally. Use a current Site-tools-compatible browser when demonstrating the agent path, 1920×1080 when possible, and always open with `?fresh=1`.
 
 Paste-ready short instructions for Devpost: [`../submission/testing-instructions.md`](../submission/testing-instructions.md).
 

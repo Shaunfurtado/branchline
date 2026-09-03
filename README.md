@@ -4,7 +4,7 @@
 
 # BRANCHLINE
 
-**Live demo:** [https://branchline-flax.vercel.app](https://branchline-flax.vercel.app/?fresh=1)
+**Live demo:** [https://trybranchline.vercel.app](https://trybranchline.vercel.app/?fresh=1)
 
 **Repository:** [https://github.com/Shaunfurtado/branchline](https://github.com/Shaunfurtado/branchline)
 

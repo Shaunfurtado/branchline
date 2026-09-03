@@ -1,6 +1,6 @@
 # BRANCHLINE evaluation prompts
 
-These evaluations are designed for a compatible browser agent operating the live BRANCHLINE page. Prefer https://branchline-flax.vercel.app/?fresh=1, or a local preview with `?fresh=1`. Trigger the featured supplier shock, and keep the Capability Dock visible when evaluating lifecycle behavior.
+These evaluations are designed for a compatible browser agent operating the live BRANCHLINE page. Prefer https://trybranchline.vercel.app/?fresh=1, or a local preview with `?fresh=1`. Trigger the featured supplier shock, and keep the Capability Dock visible when evaluating lifecycle behavior.
 
 ## 1. Main recovery
 

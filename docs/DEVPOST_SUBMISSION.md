@@ -6,7 +6,7 @@ Judge testing instructions (no credentials): [`../submission/testing-instruction
 
 ## Published links
 
-- Live application: https://branchline-flax.vercel.app/?fresh=1
+- Live application: https://trybranchline.vercel.app/?fresh=1
 - Public repository: https://github.com/Shaunfurtado/branchline
 - Video: replace only when the recording is uploaded
 

@@ -122,7 +122,7 @@ State is persisted to local storage with the synthetic scenario identifier and v
 
 ## Static deployment
 
-Live demo: https://branchline-flax.vercel.app/?fresh=1
+Live demo: https://trybranchline.vercel.app/?fresh=1
 
 The production build contains only HTML, CSS, JavaScript, and SVG assets. The included Python server and hosting configurations add:
 

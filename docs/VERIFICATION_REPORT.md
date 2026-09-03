@@ -78,7 +78,7 @@ Equivalent Vercel, Netlify, and `_headers` configurations are included.
 
 ## Publication status
 
-- Live application: https://branchline-flax.vercel.app/?fresh=1
+- Live application: https://trybranchline.vercel.app/?fresh=1
 - Public repository: https://github.com/Shaunfurtado/branchline
 - Judge testing instructions: `submission/testing-instructions.md` (no credentials)
 - Demo video URL: not claimed until recording is uploaded
