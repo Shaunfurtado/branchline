@@ -96,17 +96,21 @@ The mock is lifecycle-faithful but test-only. It is injected before application 
 
 ## Visual review
 
-`scripts/capture_screenshots.py` drives the same registered tool surface and saves 1600×900 captures for:
+`scripts/capture_screenshots.py` drives the same registered tool surface and saves 1600×900 captures under `submission/screenshots/`:
 
-- healthy reality;
-- shock cascade;
-- three parallel futures;
-- human intent plus stale branches;
-- verified commit;
-- Causal Proof;
-- restored checkpoint.
+| File | Moment |
+|---|---|
+| `01-healthy.png` | Healthy featured twin |
+| `02-disrupted.png` | Featured NoriCell shock cascade |
+| `03-branches.png` | Three recovery branches simulated |
+| `04-compare.png` | Branchspace comparison |
+| `05-staged-approval.png` | Staged plan awaiting human approval |
+| `06-executed.png` | Commit after UI approval |
+| `07-verified-recovery.png` | Verification evidence |
+| `08-capability-surface.png` | Agent Capability Surface |
+| `09-about-architecture.png` | Architecture / about surface |
 
-Captures are under `submission/screenshots/`. They were inspected for hierarchy, clipping, text size, panel balance, causal legibility, and support-state accuracy. The four required submission images are `01` through `04`.
+These are the submission screenshots. Inspect hierarchy, clipping, text size, panel balance, causal legibility, and support-state accuracy before regenerating for a release.
 
 ## Header verification
 

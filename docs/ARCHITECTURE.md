@@ -108,6 +108,8 @@ Examples:
 
 SVG entity positions are fixed in scenario data for deterministic identity-preserving transitions. The application uses no random force layout. CSS respects `prefers-reduced-motion`; optional Web Audio is muted until the human enables it.
 
+The current presentation layer uses a light editorial visual system (tokens in `src/styles/tokens.css`, layout/motion in `global.css` / `responsive.css` / `motion.css`). Visual treatment must never invent metrics; all numbers remain simulator-derived.
+
 ## WebMCP lifecycle
 
 `src/webmcp/registry.ts` owns one `AbortController` per registered tool. It compares `desiredToolNames(state)` against active controllers, aborts obsolete registrations, registers newly valid tools with direct native calls, and mirrors the current registry to the Capability Dock. It optionally reconciles with `document.modelContext.getTools()` and listens for `toolchange`.
@@ -120,7 +122,9 @@ State is persisted to local storage with the synthetic scenario identifier and v
 
 ## Static deployment
 
-The production build contains only HTML, CSS, JavaScript, SVG, and screenshots. The included Python server and hosting configurations add:
+Live demo: https://branchline-flax.vercel.app/?fresh=1
+
+The production build contains only HTML, CSS, JavaScript, and SVG assets. The included Python server and hosting configurations add:
 
 ```text
 Origin-Agent-Cluster: ?1

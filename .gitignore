@@ -10,3 +10,6 @@ __pycache__/
 .env
 
 tmp/
+.tmp-verify/
+.workbuddy-ai/
+redesign-shots/

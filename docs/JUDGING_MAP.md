@@ -21,7 +21,7 @@ This document maps observable evidence—not aspirational claims—to the four c
 | Capability truthfulness | Dock mirrors registered and native-discovered names |
 | Cancellation | Simulation abort checks and no-partial-result test |
 
-Judge sequence evidence: `e2e/test_featured_flow.py` and screenshots `01`–`06`.
+Judge sequence evidence: `e2e/test_featured_flow.py` and `submission/screenshots/01`–`09`.
 
 ## Execution
 
@@ -39,7 +39,10 @@ Judge sequence evidence: `e2e/test_featured_flow.py` and screenshots `01`–`06`
 | Tests | 23 unit/WebMCP tests + 5 Chromium E2E tests |
 | Static deployment | `dist/`, `vercel.json`, `netlify.toml`, `public/_headers` |
 | Documentation | README and `docs/` set |
-| Submission captures | Seven verified 1600×900 screenshots |
+| Submission captures | Nine screenshots in `submission/screenshots/` |
+| Live demo | https://branchline-flax.vercel.app/?fresh=1 |
+| Public repository | https://github.com/Shaunfurtado/branchline |
+| Judge testing notes | `submission/testing-instructions.md` |
 
 ## Potential impact
 

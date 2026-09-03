@@ -2,9 +2,10 @@
 
 ## Fork reality. Simulate the consequences. Commit the future.
 
-**Live application:** _Credentialed deployment pending; verified static build included in `dist/`._  
-**Repository:** _Credentialed public-repository publish pending._  
-**Video:** _Credentialed recording/upload pending; complete script and captions included._
+**Live application:** [https://branchline-flax.vercel.app/?fresh=1](https://branchline-flax.vercel.app/?fresh=1)  
+**Repository:** [https://github.com/Shaunfurtado/branchline](https://github.com/Shaunfurtado/branchline)  
+**Video:** _Recording/upload pending; complete script and captions included._  
+**Testing instructions:** no credentials — see `submission/testing-instructions.md`
 
 ## The problem
 
@@ -164,7 +165,11 @@ This is not a dashboard with a chatbot attached. It is one operational world wit
 
 ## Testing
 
-Run:
+No credentials are required for the live app.
+
+**Live:** https://branchline-flax.vercel.app/?fresh=1
+
+**Local:**
 
 ```bash
 npm install
@@ -175,7 +180,7 @@ npm run capture
 
 Verified automated coverage includes 23 domain/WebMCP tests and 5 Chromium E2E tests. The browser suite executes the canonical flow through a test-only `document.modelContext` lifecycle mock, checks dynamic registration and approval gating, asserts no console/page errors, validates escaped malicious-looking alerts, and tests 1024×768, 1440×900, and 1920×1080 layouts.
 
-The production application does not ship that mock. A real submission recording should use a current compatible Site-tools browser agent.
+The production application does not ship that mock. A real submission recording should use a current compatible Site-tools browser agent. Full judge instructions: `submission/testing-instructions.md`.
 
 ## Synthetic-data disclosure
 

@@ -1,14 +1,15 @@
 # Canonical judge demo
 
-Target runtime: 5–7 minutes for an interactive judge walkthrough. Use a current Site-tools-compatible browser, 1920×1080 when possible, and `?fresh=1`.
+Target runtime: 5–7 minutes for an interactive judge walkthrough. Prefer the live app at https://branchline-flax.vercel.app/?fresh=1, or run locally. Use a current Site-tools-compatible browser when demonstrating the agent path, 1920×1080 when possible, and always open with `?fresh=1`.
+
+Paste-ready short instructions for Devpost: [`../submission/testing-instructions.md`](../submission/testing-instructions.md).
 
 ## Preflight
 
-1. Run `npm install && npm run build && npm run preview`.
-2. Open the app at the preview URL with `?fresh=1`.
-3. Confirm the command bar shows **Site tools: 6 registered**.
-4. Open **Agent Capability Surface** briefly and confirm the native discovered set matches the six registered tools.
-5. Close the dock. Keep cinematic audio muted unless the venue permits it.
+1. Open the live URL with `?fresh=1`, or run `npm install && npm run build && npm run preview` and open the preview URL with `?fresh=1`.
+2. Confirm the command bar shows **Site tools: 6 registered** when WebMCP is available, or the human-mode fallback notice when it is not.
+3. Open **Agent Capability Surface** briefly and confirm the discovered set matches the registered tools (or the unsupported state).
+4. Close the dock. Keep cinematic audio muted unless the venue permits it.
 
 ## 1. Observe the healthy twin
 

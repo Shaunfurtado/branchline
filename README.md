@@ -1,16 +1,20 @@
 <p align="center">
-  <img src="submission/screenshots/02-parallel-futures.png" alt="BRANCHLINE showing three deterministic recovery futures emerging from one shared operational reality" width="100%">
+  <img src="submission/screenshots/04-compare.png" alt="BRANCHLINE showing deterministic recovery futures compared in Branchspace" width="100%">
 </p>
 
 # BRANCHLINE
 
-**Live demo:** _Deployment URL pending credentialed publish. The verified static production build is included in `dist/`._
+**Live demo:** [https://branchline-flax.vercel.app](https://branchline-flax.vercel.app/?fresh=1)
+
+**Repository:** [https://github.com/Shaunfurtado/branchline](https://github.com/Shaunfurtado/branchline)
 
 **Fork reality. Simulate the consequences. Commit the future.**
 
 BRANCHLINE is an agent-native operational recovery control plane that traces every consequence of a disruption, creates recoverable futures, and applies only the future a human approves.
 
-**Demo video:** _Recording/upload URL pending credentialed production. The complete script, storyboard, thumbnail, and captions are in `submission/`._
+**Demo video:** _Recording/upload URL pending. Script, storyboard, thumbnail, and captions are in `submission/`._
+
+**Judge testing instructions:** [`submission/testing-instructions.md`](submission/testing-instructions.md) — no credentials required.
 
 ## Why this needs WebMCP
 
@@ -244,8 +248,7 @@ src/
 e2e/            Chromium canonical-flow, responsive, and security tests
 scripts/        build, serve, lint, tool budgets, E2E, screenshot capture
 docs/           architecture, security, evals, testing, judging evidence
-submission/     prompts, Devpost copy, video plan, captions, thumbnail, captures
-dist/           verified static production build
+submission/     prompts, Devpost copy, testing instructions, video plan, captions, thumbnail, screenshots
 ```
 
 ## Synthetic-data disclosure
@@ -262,7 +265,7 @@ All manufacturers, suppliers, customers, products, orders, routes, costs, reliab
 - Data persistence is browser-local and intentionally single-user.
 - Emissions and risk metrics are simplified synthetic indicators.
 - The included browser test mock validates registration and lifecycle mechanics but is not presented as an external agent. A submission recording should show a real compatible browser agent.
-- Deployment, repository publication, and video upload require external account credentials and are not claimed here.
+- Live application and public repository are published; demo video upload remains a separate credentialed step.
 
 ## License
 

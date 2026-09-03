@@ -89,12 +89,12 @@ def main() -> int:
             page.goto(f'http://127.0.0.1:{port}/?fresh=1', wait_until='networkidle')
             page.wait_for_function("() => window.__branchlineNativeTools.names().then(names => names.length === 6)")
             page.wait_for_timeout(300)
-            capture(page, '00-healthy-reality.png')
+            capture(page, '01-healthy.png')
 
             page.locator('[data-action="trigger-shock"]').first.click()
             page.wait_for_function("() => window.__branchlineNativeTools.names().then(names => names.includes('create_branch'))")
             page.wait_for_timeout(650)
-            capture(page, '01-shock-cascade.png')
+            capture(page, '02-disrupted.png')
 
             call(page, 'trace_impact', {'source_id': 'sup_nori', 'direction': 'downstream', 'max_depth': 5})
             created_ids: list[str] = []
@@ -107,21 +107,23 @@ def main() -> int:
                 branch_id = branch['data']['id']
                 created_ids.append(branch_id)
                 call(page, 'simulate_branch', {'branch_id': branch_id, 'horizon_days': 30})
+            page.wait_for_timeout(500)
+            capture(page, '03-branches.png')
+
             call(page, 'compare_branches', {'branch_ids': created_ids})
             page.wait_for_timeout(600)
-            capture(page, '02-parallel-futures.png')
+            capture(page, '04-compare.png')
 
             page.locator('[data-action="protect-apex"]').click()
-            page.get_by_role('tab', name='Causality').click()
-            page.wait_for_timeout(450)
-            capture(page, '03-human-intent-stale.png')
-
             balanced_id = created_ids[2]
             call(page, 'simulate_branch', {'branch_id': balanced_id, 'horizon_days': 30})
             staged = call(page, 'stage_plan', {
                 'branch_id': balanced_id,
                 'rationale': 'Best current service-cost tradeoff after the human Apex lock.',
             })
+            page.wait_for_timeout(500)
+            capture(page, '05-staged-approval.png')
+
             page.locator('[data-action="approve-plan"]').click()
             page.wait_for_function("() => window.__branchlineNativeTools.names().then(names => names.includes('apply_plan'))")
             snapshot = call(page, 'get_ops_snapshot', {})
@@ -129,21 +131,28 @@ def main() -> int:
                 'plan_id': staged['data']['plan_id'],
                 'expected_context_version': snapshot['context_version'],
             })
-            call(page, 'verify_plan', {'plan_id': staged['data']['plan_id']})
             page.wait_for_timeout(700)
-            capture(page, '04-approved-committed-recovery.png')
+            capture(page, '06-executed.png')
 
-            page.get_by_label('Recovery verified').get_by_role('button', name='Causal proof').click()
+            call(page, 'verify_plan', {'plan_id': staged['data']['plan_id']})
             page.wait_for_timeout(500)
-            capture(page, '05-causal-proof.png')
-            page.locator('[data-action="close-proof"]').click()
+            capture(page, '07-verified-recovery.png')
+
+            page.locator('[data-action="toggle-capabilities"]').first.click()
+            page.wait_for_timeout(400)
+            capture(page, '08-capability-surface.png')
+            page.keyboard.press('Escape')
+
+            page.locator('[data-action="toggle-about"]').click()
+            page.wait_for_timeout(400)
+            capture(page, '09-about-architecture.png')
+            page.keyboard.press('Escape')
 
             call(page, 'rollback_plan', {
                 'checkpoint_id': applied['data']['checkpoint_id'],
                 'reason': 'Supplier agreement was not signed.',
             })
-            page.wait_for_timeout(650)
-            capture(page, '06-checkpoint-restored.png')
+            page.wait_for_timeout(400)
 
             if errors:
                 raise RuntimeError('Browser errors during capture:\n' + '\n'.join(errors))

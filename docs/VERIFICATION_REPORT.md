@@ -13,7 +13,7 @@ Verified on **2026-08-28** against the repository state packaged with this repor
 | `npm run build` | Passed; static production output generated in `dist/`. |
 | `npm run verify:build` | Passed; **89 files**, **599.3 KiB** total, **283.9 KiB** JavaScript. |
 | `npm run test:e2e` | Passed **5/5** Chromium tests in 23.42 seconds. |
-| `npm run capture` | Passed; seven 1600×900 release screenshots regenerated. |
+| `npm run capture` | Regenerates nine 1600×900 screenshots into `submission/screenshots/`. |
 
 `npm run verify` completed successfully as one chained release gate.
 
@@ -61,7 +61,7 @@ The E2E suite exercised:
 - 1024×768, 1440×900, and 1920×1080 viewport containment;
 - keyboard dismissal, reduced-motion behavior, untrusted-alert escaping, and absence of page/console errors.
 
-Seven 1600×900 captures were inspected after the final build. Review confirmed a legible shock cascade, spatially distinct futures, clear gold human intent and stale treatment, an explicit approval boundary, a strong verification state, readable Causal Proof, and visible rollback restoration.
+Seven automated captures were inspected after the final build; the current submission set expands that evidence to nine screenshots covering healthy → disrupted → branches → compare → staged approval → executed → verified → capability surface → architecture. Review confirmed a legible shock cascade, spatially distinct futures, clear approval boundary, strong verification state, and readable capability/architecture surfaces.
 
 ## Header verification
 
@@ -78,4 +78,9 @@ Equivalent Vercel, Netlify, and `_headers` configurations are included.
 
 ## Publication status
 
-No Vercel, Netlify, GitHub CLI/token, YouTube, or Google upload credentials were present. The connected GitHub integration exposed existing-repository operations but no repository-creation action, and no accessible repository named `branchline` existed. No live application, public repository, or video URL is claimed.
+- Live application: https://branchline-flax.vercel.app/?fresh=1
+- Public repository: https://github.com/Shaunfurtado/branchline
+- Judge testing instructions: `submission/testing-instructions.md` (no credentials)
+- Demo video URL: not claimed until recording is uploaded
+
+The automated Chromium suite still uses a test-only `document.modelContext` mock. A real Site-tools recording remains a separate manual submission step.

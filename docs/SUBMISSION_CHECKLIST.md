@@ -38,6 +38,7 @@
 
 ## Visual and interaction
 
+- [x] Light editorial visual system after UX revamp.
 - [x] Radial shock cascade.
 - [x] Agent causal traces.
 - [x] Parallel-future ribbons.
@@ -50,7 +51,7 @@
 - [x] Rollback rewind.
 - [x] Reduced-motion treatment.
 - [x] Optional muted procedural audio.
-- [x] 1600×900 captures rendered and inspected.
+- [x] Nine submission screenshots in `submission/screenshots/`.
 - [x] 1024, 1440, and 1920 viewport E2E checks.
 
 ## Engineering
@@ -66,10 +67,11 @@
 - [x] No placeholder core behavior.
 - [x] No real customer data.
 - [x] Vercel, Netlify, and static headers supplied.
+- [x] Test-only redesign evidence removed; repo kept submission-clean.
 
 ## Submission assets
 
-- [x] Complete README.
+- [x] Complete README with live URL and repository URL.
 - [x] Architecture documentation.
 - [x] Domain/simulation documentation.
 - [x] WebMCP documentation.
@@ -77,22 +79,23 @@
 - [x] Eval prompts.
 - [x] Judging map.
 - [x] Testing guide.
+- [x] Judge testing instructions (`submission/testing-instructions.md`).
 - [x] Canonical demo prompt.
 - [x] Follow-up prompts.
 - [x] Devpost copy.
 - [x] Under-2:45 video script/storyboard.
 - [x] Valid captions file.
 - [x] Original 1280×720 thumbnail.
-- [x] Four required submission screenshots plus three additional captures.
+- [x] Nine submission screenshots covering healthy → recovery → capability → architecture.
 - [x] MIT license and third-party notice.
 
-## Credential-gated external publication
+## Publication
 
-- [ ] Deploy and verify public URL.
-- [ ] Publish and verify public repository URL.
+- [x] Deploy and verify public URL: https://branchline-flax.vercel.app/?fresh=1
+- [x] Publish and verify public repository: https://github.com/Shaunfurtado/branchline
 - [ ] Record the real compatible-browser-agent demonstration.
 - [ ] Upload and verify public video URL.
-- [ ] Replace explicit URL placeholders in README/submission copy.
-- [ ] Submit on Devpost before the current official deadline.
+- [ ] Replace the video placeholder in README/submission copy.
+- [ ] Submit on Devpost before the official deadline.
 
 No unchecked item above is claimed as completed.
